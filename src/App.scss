@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  width: 100%;
+  flex:1;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-container{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+.note-container{
+  text-align: center;
+  width: 100%;
+  flex:1;
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
