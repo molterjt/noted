@@ -1,0 +1,32 @@
+.note-list-item{
+  width:100%;
+  height: 35px;
+  border-bottom: 1px solid darkblue;
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5px;
+
+  &:hover{
+    transform: scale(1.05);
+    transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    border-bottom: 1px solid darkmagenta;
+    padding-left: 20px;
+  }
+
+
+
+  .title{
+    color: darkcyan;
+    font-size: 16px;
+    padding-left: 9px
+  }
+
+  .note_date{
+    color: gray;
+    font-style: italic;
+    font-size: 9px;
+  }
+}

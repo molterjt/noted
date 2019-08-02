@@ -1,0 +1,116 @@
+
+.expanded-note{
+  width: 80%;
+  height: auto;
+  backface-visibility: visible;
+  box-shadow: 0 10px 10px rgba(50,50,93,.6),0 10px 10px rgba(0,0,0,.8) ;
+  border: 1px solid black;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 55px 0 55px 0;
+  text-align:center;
+  overflow: hidden;
+  background-color: white;
+  .header-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30px;
+    //border: 2px solid darkmagenta;
+    width: 100%;
+    align-items: center;
+
+    .note_date{
+      font-size: 12px;
+      font-style: italic;
+      color: gray;
+      padding-left: 5px;
+    }
+    .note_time{
+      font-size: 12px;
+      font-style: italic;
+      color: gray;
+
+    }
+
+  }
+
+
+
+}
+.note-tile{
+  width: 28%;
+  //height: 250px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+  text-align:center;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(50,50,93,.6),0 10px 10px rgba(0,0,0,.8) ;
+
+
+
+
+  .header-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30px;
+    //border: 2px solid darkmagenta;
+    width: 100%;
+    align-items: center;
+
+    .note_date{
+      font-size: 12px;
+      font-style: italic;
+      color: gray;
+      padding-left: 5px;
+    }
+    .note_time{
+      font-size: 12px;
+      font-style: italic;
+      color: gray;
+
+    }
+    .trash-can{
+      cursor: pointer;
+      padding-right: 5px;
+    }
+
+
+  }
+
+  .title{
+    color: darkcyan;
+    font-family: Avenir, sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  .content{
+    padding: 10px;
+  }
+
+  &:hover{
+    //transform: scale(1.1);
+    //transition: transform 900ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    border: 2px solid darkmagenta;
+    box-shadow: 0 20px 20px rgba(50,50,93,.6),0 20px 20px rgba(0,0,0,.8) ;
+    //backface-visibility: visible;
+    //height: auto;
+    //position: relative;
+    //top: -40px;
+    //z-index: 0;
+
+  }
+
+
+}
