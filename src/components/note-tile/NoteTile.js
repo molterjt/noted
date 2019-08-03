@@ -41,7 +41,7 @@ class NoteTile extends React.Component{
         this.handleContentPreview();
     }
     render(){
-        const {title, note_date, note_time, content, handleDelete, handleEdit, editForm} = this.props;
+        const {id, title, note_date, note_time, content, handleDelete, handleEdit, editForm} = this.props;
 
         return(
             <div className={this.state.expandNote ? 'expanded-note' : 'note-tile'}>
@@ -72,6 +72,7 @@ class NoteTile extends React.Component{
                         buttonLabel={'Edit'}
                     >
                         <NoteDetail
+                            id={id}
                             title={title}
                             note_time={note_time}
                             note_date={note_date}

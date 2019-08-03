@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './NoteDetail-Style.scss';
-import {FiEdit3, FiMinimize2, FiMaximize2, FiRewind} from 'react-icons/fi';
+import EditNote from '../../containers/EditNote';
+import {FiEdit3} from 'react-icons/fi';
 
 
 class NoteDetail extends React.Component{
@@ -14,10 +15,10 @@ class NoteDetail extends React.Component{
     }
     handleShowForm = () => {
         this.setState({showForm: !this.state.showForm})
-    }
+    };
 
     render(){
-        const {title, note_date, note_time, content, handleEdit, editForm} = this.props;
+        const { id, title, note_date, note_time, content } = this.props;
         return(
             <div className="note-detail-container">
                 <header className="header-info">
@@ -28,27 +29,23 @@ class NoteDetail extends React.Component{
                 <div className="content-container">
                     <p className="content-text"> {content} </p>
                 </div>
-
-
                 <footer className="edit-note-container">
                     {
                         this.state.showForm
                             ?  <FiEdit3
-                                size={24}
-                                color={'blue'}
-                                onClick={() => this.handleShowForm()}
-                            />
+                                    size={24}
+                                    color={'blue'}
+                                    onClick={() => this.handleShowForm()}
+                                />
                             :  <FiEdit3
                                     size={24}
                                     color={'red'}
                                     onClick={() => this.handleShowForm()}
                                 />
                     }
-
                     {this.state.showForm
                         ? <div>
-                            {editForm}
-                            <button onClick={handleEdit}>Edit Note</button>
+                            <EditNote id={id}/>
                         </div>
                         : null
                     }
@@ -62,6 +59,7 @@ NoteDetail.propTypes={
     time_stamp: PropTypes.string,
     content: PropTypes.string,
     handleDelete: PropTypes.func,
+    handleEdit: PropTypes.func,
 };
 export default NoteDetail;
 

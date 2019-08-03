@@ -1,8 +1,8 @@
-
+import {combineReducers} from 'redux';
 import {ADD_NOTE, REMOVE_NOTE, EDIT_NOTE} from '../actions';
 
 
-const AllNotes = (state=[], action) => {
+const Notes = (state=[], action) => {
     switch(action.type){
         case ADD_NOTE:
             return [
@@ -12,8 +12,8 @@ const AllNotes = (state=[], action) => {
                     content: action.content,
                     note_date: action.note_date,
                     note_time: action.note_time
-                }
-                ,...state
+                },
+                ...state
             ];
         case REMOVE_NOTE:
             return state.filter(note => note.id !== action.id);
@@ -28,4 +28,4 @@ const AllNotes = (state=[], action) => {
     }
 }
 
-export default AllNotes;
+export default  combineReducers({Notes});
