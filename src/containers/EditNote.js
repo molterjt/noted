@@ -10,8 +10,8 @@ class EditNote extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            newTitle: '',
-            newContent: '',
+            newTitle: this.props.title,
+            newContent: this.props.content,
         };
     };
     handleChange = (event) => {
@@ -30,12 +30,13 @@ class EditNote extends React.Component{
         })
     }
     render(){
+        const {newTitle, newContent} = this.state;
         return(
             <form>
                 <FormInput
                     type={'text'}
                     name={'newTitle'}
-                    value={this.state.newTitle}
+                    value={newTitle}
                     required={true}
                     autoComplete={'off'}
                     label={'Note Title'}
@@ -43,7 +44,7 @@ class EditNote extends React.Component{
                 />
                 <TextBox
                     name={'newContent'}
-                    value={this.state.newContent}
+                    value={newContent}
                     required={true}
                     onChange={this.handleChange}
                     placeholder={"Didn't convey it quite right?  Edit your note now"}
@@ -62,5 +63,6 @@ class EditNote extends React.Component{
         );
     }
 };
+
 
 export default connect()(EditNote);

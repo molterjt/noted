@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import NoteList from './components/note-list/NoteList'
 import MappedNoteGallery from './containers/MappedNoteGallery';
+import MappedNoteList from './containers/MappedNoteList';
 import AddNote from './containers/AddNote';
 
 const now = new Date();
@@ -62,10 +63,7 @@ const data = [
 const App = () => (
     <div className="top-level-container">
         <div className="left-container">
-            <h2>Note List:</h2>
-            <NoteList
-                noteData={data}
-            />
+            <MappedNoteList/>
         </div>
         <div className="right-container">
             <AddNote/>

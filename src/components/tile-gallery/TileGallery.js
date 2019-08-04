@@ -1,14 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NoteTile from '../note-tile/NoteTile';
-import FormInput from '../form-Input/FormInput';
-import TextBox from '../text-box/TextBox';
-import {FiPlusCircle} from 'react-icons/fi'
 
-
-const TileGallery = ({notes, onRemoveNote, onEditNote }) => (
+const TileGallery = ({notes, onRemoveNote }) => (
   <div className="note-tile-container">
-      {notes ?
+      {notes.length > 0 ?
         notes.map((note, index) => (
             <NoteTile
                 key={index}
@@ -18,10 +14,11 @@ const TileGallery = ({notes, onRemoveNote, onEditNote }) => (
                 note_date={note.note_date}
                 content={note.content}
                 handleDelete={() => onRemoveNote(note.id)}
-                handleEdit={() => onEditNote(note.id)}
             />
         ))
-          : 'Write your first note!'
+          : <h3 style={{color:'#26a2dd',alignSelf:'center', textAlign:'center', justifyContent:'center', display:'flex', marginTop: 30}}>
+              Write your first note!
+          </h3>
       }
   </div>
 );
@@ -33,7 +30,6 @@ TileGallery.propTypes = {
             content: PropTypes.string,
             note_date: PropTypes.string,
             note_time: PropTypes.string,
-            handleEdit: PropTypes.func,
             handleDelete: PropTypes.func,
         })
     )

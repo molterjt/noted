@@ -5,24 +5,22 @@ import "./NoteList-Style.scss";
 import NoteListItem from '../note-list-item/NoteListItem';
 
 const NoteList = ({noteData}) => (
-  <div>
+  <div className="note-list">
+      <h1 className="header">Note List</h1>
       {
-          noteData
-          ? (
-                  <div>
-                      {
-                          noteData.map( (note, index) => (
-                              <NoteListItem
-                                key={index}
-                                title={note.title}
-                                note_date={note.note_date}
-                              />
-                          ))
-                      }
-                  </div>
+          noteData.length > 0
+          ?
+              noteData.map( (note, index) => (
+                  <NoteListItem
+                    key={index}
+                    title={note.title}
+                    note_date={note.note_date}
+                  />
+              ))
 
-          )
-          : <span>Create Your First Note!</span>
+          : <span style={{marginLeft: 10, marginTop: 30}}>
+                  No notes yet ...
+              </span>
       }
   </div>
 );

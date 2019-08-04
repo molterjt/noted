@@ -45,7 +45,7 @@ class NoteDetail extends React.Component{
                     }
                     {this.state.showForm
                         ? <div>
-                            <EditNote id={id}/>
+                            <EditNote id={id} title={title} content={content}/>
                         </div>
                         : null
                     }
@@ -59,7 +59,6 @@ NoteDetail.propTypes={
     time_stamp: PropTypes.string,
     content: PropTypes.string,
     handleDelete: PropTypes.func,
-    handleEdit: PropTypes.func,
 };
 export default NoteDetail;
 
