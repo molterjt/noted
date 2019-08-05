@@ -20,6 +20,7 @@
   @media (max-width: 1100px) {
     flex-direction: column;
   }
+
 }
 
 .left-container{
@@ -88,6 +89,16 @@
     font-size: 12px;
     text-align: center;
   }
+}
+
+.title-header{
+  font-family: 'Big Caslon', Courier, sans-serif;
+  font-size: 66px;
+  color: white;
+  text-shadow: -5px -3px 4px black;
+  text-align: center;
+  margin: 20px;
+
 }
 
 .form-container{

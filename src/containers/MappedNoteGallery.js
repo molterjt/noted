@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {removeNote, editNote} from "../actions";
+import {removeNote, editNote, toggle_NoteDetail, filterNote} from "../actions";
 import TileGallery from '../components/tile-gallery/TileGallery';
 
 
@@ -11,7 +11,13 @@ const mapDispatchToProps = (dispatch) => ({
     },
     onEditNote: id => {
         dispatch(editNote(id))
-    }
+    },
+    onShowNoteDetailModal: id => {
+        dispatch(toggle_NoteDetail(id))
+    },
+    onFilterNote: id => {
+        dispatch(filterNote(id))
+    },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TileGallery);

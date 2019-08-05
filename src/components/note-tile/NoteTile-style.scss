@@ -1,42 +1,6 @@
 
-.expanded-note{
-  width: 80%;
-  height: auto;
-  backface-visibility: visible;
-  box-shadow: 0 10px 10px rgba(50,50,93,.6),0 10px 10px rgba(0,0,0,.8) ;
-  border: 1px solid black;
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 55px 0 55px 0;
-  text-align:center;
-  overflow: hidden;
-  background-color: white;
-  .header-info{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 30px;
-    //border: 2px solid darkmagenta;
-    width: 100%;
-    align-items: center;
-
-    .note_date{
-      font-size: 12px;
-      font-style: italic;
-      color: gray;
-      padding-left: 5px;
-    }
-    .note_time{
-      font-size: 12px;
-      font-style: italic;
-      color: gray;
-
-    }
-
-  }
+.hidden-note{
+  visibility: hidden;
 
 
 

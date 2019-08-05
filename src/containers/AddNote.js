@@ -77,10 +77,11 @@ class AddNote extends React.Component{
                         )
                         : (
                             <div className="addNoteContainer">
-                                <label className="add-note-label">Add Note</label>
+                                <label className="add-note-label">Write New Note</label>
                                 <FiEdit size={36} color={'#1cb684'} onClick={this.toggleAddNoteForm} style={{cursor:'pointer'}} />
 
                             </div>
+
                         )
                 }
             </div>

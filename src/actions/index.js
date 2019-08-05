@@ -1,9 +1,12 @@
 export const ADD_NOTE = "ADD_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const EDIT_NOTE = "EDIT_NOTE";
+export const TOGGLE_NOTEDETAIL = "TOGGLE_NOTEDETAIL";
+export const FILTER_NOTE = "FILTER_NOTE";
+export const RESET_FILTER = "RESET_FILTER";
 
 
-let NoteEntry = 0;
+let NoteEntry = 8;
 const now = new Date();
 const note_date = now.toLocaleDateString();
 const note_time = now.toLocaleTimeString();
@@ -32,5 +35,17 @@ export function editNote(id, title, content) {
         content,
     }
 }
+
+export const toggle_NoteDetail = (id) => ({
+    type: TOGGLE_NOTEDETAIL,
+    id
+});
+
+export const filterNote = (id) => ({
+    type: FILTER_NOTE,
+    id
+});
+export const resetFilter = () => ({type: RESET_FILTER});
+
 
 

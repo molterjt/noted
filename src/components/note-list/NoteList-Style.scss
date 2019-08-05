@@ -1,10 +1,44 @@
 .note-list{
+}
 
-  .header{
+.header{
+  color: darkmagenta;
+  font-size: 20px;
+  font-family: 'Big Caslon',Avenir, sans-serif;
+  padding: 3px;
+  border-bottom: 1px solid slategrey;
+}
+.filter-message{
+  font-size: 10px;
+  color: gray;
+  text-align: center;
+}
+
+.rewind{
+  align-self: center;
+  text-align:center;
+  margin: 20px;
+  cursor: pointer;
+  position: center;
+
+  &:hover{
     color: darkmagenta;
-    font-size: 20px;
-    font-family: 'Big Caslon',Avenir, sans-serif;
-    padding: 3px;
-    border-bottom: 1px solid slategrey;
+  }
+}
+.refresh{
+  border: 1px solid darkmagenta;
+  background-color: transparent;
+  color: green;
+  align-self: center;
+  text-align:center;
+  cursor: pointer;
+  border-radius: 15%;
+  align-content: center;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  &:hover{
+    color: darkmagenta;
+    background-color: lightcyan;
   }
 }

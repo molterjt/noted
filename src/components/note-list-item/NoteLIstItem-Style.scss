@@ -8,12 +8,15 @@
   justify-content: space-between;
   align-items: baseline;
   padding: 5px;
+  cursor: pointer;
 
   &:hover{
     transform: scale(1.05);
     transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     border-bottom: 1px solid darkmagenta;
     padding-left: 20px;
+    cursor: pointer;
+
   }
 
 

@@ -14,6 +14,8 @@ const TileGallery = ({notes, onRemoveNote }) => (
                 note_date={note.note_date}
                 content={note.content}
                 handleDelete={() => onRemoveNote(note.id)}
+                showNoteTile={note.showNoteTile}
+
             />
         ))
           : <h3 style={{color:'#26a2dd',alignSelf:'center', textAlign:'center', justifyContent:'center', display:'flex', marginTop: 30}}>
@@ -31,6 +33,8 @@ TileGallery.propTypes = {
             note_date: PropTypes.string,
             note_time: PropTypes.string,
             handleDelete: PropTypes.func,
+            showNoteTile: PropTypes.bool,
+
         })
     )
 };
